@@ -193,4 +193,5 @@ A terminal can always be created/opened with ```View menu -> Terminal```.  Howev
 3. Close any existing terminals in Visual Code
 
 
+
    
