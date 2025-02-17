@@ -22,6 +22,8 @@ Run the installer; I would install it for All Users (especially if your username
 
 Open "Anaconda Prompt (miniconda3)" **as an administrator**; you should see ```(base)``` to the left of your terminal prompt.
 
+Administrator mode is necessary so environments are created and updated in the system installation directory (as opposed to somewhere in your user directory).
+
 ### Linux
 
 First, download the latest version:
@@ -155,6 +157,8 @@ conda init
 
 ## Visual Code
 I strongly recommend Visual Code as your IDE.
+
+### Installation
 * [Download](https://code.visualstudio.com/) and install Visual Code
   * I suggest enabling the context menu options.
   * ***For Mac:*** Follow [these instructions](https://code.visualstudio.com/docs/setup/mac)
@@ -163,17 +167,30 @@ I strongly recommend Visual Code as your IDE.
   * **"Git Graph"** by mhutchie
   * **"Markdown All in One"** by Yu Zhang
 
-A terminal can always be created/opened with ```View menu -> Terminal```.  However, if you need to restart, click the garbage can icon on the terminal window to destroy it.
+### Opening a Project
+Open the folder containing your project files.  Visual Code will probably create a ```.vscode``` folder if it doesn't already exist.  This will contain any project-specific settings.
 
-***For Windows:*** Change your default terminal from Powershell to Command Prompt:
-1. ```View menu -> Command Palette -> "Terminal: Select Default Profile"```
-2. Choose ```"Command Prompt"```
-3. Close any existing terminals in Visual Code
-
+### Environment Selection
 Once you open a project, to make sure you are using the correct Python interpreter:
 1. Close any open terminals with the garbage can icon
 2. Open a .py file
 3. ```View -> Command Palette -> "Python: Select interpreter"```
 4. Choose the one located at under the ```HASTE``` environment.
-5. If the GPU is not being utilized (or you see errors about paths to CUDA libraries not being found), type the following in your terminal to manually activate your environment: ```HASTE\Scripts\activate.bat``` (you will need whatever path is before ```HASTE```)
+
+### Running a Python Script
+You can run a python script by clicking the Play button in the upper-right.
+
+When you run a python script in Visual Code, it will:
+1. Open a terminal (or use an existing one)
+2. Activate your environment (based on which Python interpreter has been selected)
+3. Run the python script using the appropriate command in the terminal
+
+A terminal can always be created/opened with ```View menu -> Terminal```.  However, if you need to restart, click the garbage can icon on the terminal window to destroy it.
+
+***For Windows:*** I would recommend that you change your default terminal from Powershell to Command Prompt:
+1. ```View menu -> Command Palette -> "Terminal: Select Default Profile"```
+2. Choose ```"Command Prompt"```
+3. Close any existing terminals in Visual Code
+
+
    
